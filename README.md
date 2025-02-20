@@ -15,13 +15,21 @@ submission_reminder_<user_surname>/ ├── app/ │ ├── reminder.sh├�
     ```
 
 # Usage
+# Provide Your Name
+When you run the setup script, it will ask for your surname to personalize the directory by:
+Asking the user to provide their name
+(echo "Please provide your surname:"
+read user_surname;)
+# Create parent directory called submission_reminder_<user_surname>
+parent_dir="submission_reminder_${user_surname}"
+mkdir -p $parent_dir/
 
 # Startup Script
-1. Navigate to the `submission_reminder_<user_surname>` directory.
-2. Run the `startup.sh` script to start the reminder app when executed
+1. Navigate to the `submission_reminder_<user_surname>  directory.
+2. Run the startup.sh script to start the reminder app when executed
     ./startup.sh
 # Reminder Script (reminder.sh)
-1. The `reminder.sh` script is located in the app subdirectory.
+1. The reminder.sh script is located in the app subdirectory.
 2. It reads environment variables and helper functions, prints the remaining time, and runs the check_submissions function.
     ./app/reminder.sh
    
@@ -43,18 +51,19 @@ submission_reminder_<user_surname>/ ├── app/ │ ├── reminder.sh├�
 # Submissions File (submissions.txt)
 1. The submissions.txt file is located in the assets subdirectory.
 2. It contains student records with columns for student name, assignment, and submission status.
-    
     student, assignment, submission status
-    Chinemerem, Shell Navigation, not submitted
-    Chiagoziem, Git, submitted
-    Divine, Shell Navigation, not submitted
-    Anissa, Shell Basics, submitted
-    Assa, Shell Navigation, submitted
-    Angelique, Shell Permissions, not submitted
-    Alliance, Shell Permissions, submitted
-    Diane, Shell Permissions, Submitted
-    Anaise, Shell Permission, not submitted
-    Jean, Shell Basics, not submitted 
+Chinemerem, Shell Navigation, not submitted
+Chiagoziem, Shell Navigation, submitted
+Divine, Shell Navigation, not submitted
+Anissa, Shell Navigation, submitted
+Assa, Shell Navigation, submitted
+Angelique, Shell Navigation, not submitted
+Alliance, Shell Navigation, submitted
+Ange, Shell Navigation, not submitted
+Diane, Shell Navigation, Submitted
+Anaise, Shell Permission, not submitted
+Jean, Shell Navigation, not submitted
+  
 # Authors
 Janviere Munezero
 # Date
